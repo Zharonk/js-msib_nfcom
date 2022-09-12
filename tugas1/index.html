@@ -1,0 +1,67 @@
+<script> // language="javascript"
+    let pegawai = "Ridwan";
+    let jabatan = "Manager";
+    let status = "Menikah";
+    let gajiPokok = 0; 
+    if(jabatan == "Manager") {
+        gajiPokok = 15000000;
+    } else if(jabatan == "Asisten Manager") {
+        gajiPokok = 10000000;
+    } else if(jabatan == "Staff") {
+        gajiPokok = 5000000;
+    }
+    const tunjanganJabatan = gajiPokok * 15/100;
+    const bpjs = gajiPokok * 10/100;
+    // const isMarried = false;
+    const tunjanganKeluarga = gajiPokok * 20/100;
+    const dapatTunKel = (status === "Menikah") ? tunjanganKeluarga : 0;
+    const totalGaji = gajiPokok + tunjanganJabatan + bpjs + dapatTunKel
+    document.write(`
+    
+    <h1 align="center">DATA PEGAWAI</h1><hr>
+    <h3 align="center">
+        Nama Pegawai : ${pegawai} <br>
+        Jabatan : ${jabatan} <br>
+        Status : ${status} <br> 
+    </h3>
+        <table align="center" cellpadding="20" cellspacing="0" border="1" width="40%">
+            <thead>
+                <tr bgcolor="#415A80">
+                    <th>Data Gaji</th>
+                    <th>Nominal Gaji</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="center">Gaji pokok</td>
+                    <td align="center">${gajiPokok}</td>
+                </tr>
+                <tr>
+                    <td align="center">Tunjangan Jabatan</td>
+                    <td align="center">${tunjanganJabatan}</td>
+                </tr>
+                <tr>
+                    <td align="center">Tunjangan Keluarga</td>
+                    <td align="center">${dapatTunKel}</td>
+                </tr>
+                <tr>
+                    <td align="center">BPJS</td>
+                    <td align="center">${bpjs}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td align="center">Total Gaji</td>
+                    <td align="center">${totalGaji}</td>
+                </tr>
+            </tfoot>
+        </table>
+        <p> ${(`Total Gaji anda sebesar : Rp.${totalGaji} </br>
+    === Dengan rincian sebagai berikut === </br>
+    Gaji Pokok sebesar : Rp.${gajiPokok} </br>
+    Tunjangan Jabatan sebesar : Rp.${tunjanganJabatan} </br>
+    BPJS sebesar : Rp.${bpjs} </br>
+    Tunjangan Keluarga sebesar : Rp.${dapatTunKel} </br>
+    `)} </p>
+        `)
+</script>
