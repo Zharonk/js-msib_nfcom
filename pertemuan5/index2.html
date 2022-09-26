@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas5js_msib_nfCom_AchmadIzhar</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container my-5">
+    <div class="text-center text-primary">
+      <h2>Kalkulatorku</h2>
+    </div>
+
+    <hr />
+    <form id="calcForm" class="row g-3 mt-3">
+      <div class="col-md-6 col-12">
+        <label for="angka1" class="form-label">Angka pertama</label>
+        <input type="text" class="form-control" id="angka1" placeholder="Masukkan Angka pertama" required />
+      </div>
+      <div class="col-md-6 col-12">
+        <label for="angka2" class="form-label">Angka kedua</label>
+        <input type="text" class="form-control" id="angka2" placeholder="Masukan Angka kedua" required />
+      </div>
+      <div class="col-12">
+        <label for="hasil" class="form-label">Hasil</label>
+        <input type="text" class="form-control" name="hasil" value="" disabled />
+      </div>
+      <div class="col-12 text-center">
+        <button type="button" class="btn btn-primary" onclick="tambah()">+</button>
+        <button type="button" class="btn btn-info" onclick="kurang()">-</button>
+        <button type="button" class="btn btn-success" onclick="kali()">x</button>
+        <button type="button" class="btn btn-warning" onclick="bagi()">/</button>
+        <button type="button" class="btn btn-danger" onclick="pangkat()">^</button>
+      </div>
+    </form>
+
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+</html>
